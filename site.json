@@ -15,9 +15,6 @@
     "rives",
     "habitat_terrestre_environnant",
     "activite_humaine",
-    "site_protege",
-    "site_protege_oui",
-    "site_protege_autre",
     "base_site_description"
   ],
   "display_list": [
@@ -94,24 +91,6 @@
 	    "required": false,
       "type_util": "nomenclature"
     },
-    "site_protege": {
-      "type_widget": "radio",
-      "attribut_label": "Site protégé",
-      "values": ["Oui", "Non", "Ne sait pas"]
-    },
-    "site_protege_oui": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Si oui, précisez",
-      "code_nomenclature_type": "SITE_PROTEGE",
-	    "required": false,
-      "type_util": "nomenclature",
-      "hidden": "({value}) => value.site_protege != 'Oui'"
-            },
-      "site_protege_autre": {
-        "type_widget": "text",
-        "attribut_label": "Autre (precisez)",
-        "hidden": "({value}) => value.site_protege != 'Oui'"
-      },
       "id_sites_group": {
         "type_widget": "datalist",
         "attribut_label": "Aire",
