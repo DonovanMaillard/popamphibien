@@ -38,9 +38,10 @@
   ],
   "specific": {
     "num_passage": {
-      "type_widget": "text",
+      "type_widget": "select",
       "required": true,
-      "attribut_label": "Numéro de passage"
+      "attribut_label": "Numéro de passage",
+      "values": ["1", "2", "3"]
     },
     "id_base_site": {
       "type_widget": "site",
@@ -74,9 +75,7 @@
       "code_nomenclature_type": "ENSOLEILLEMENT",
 	    "required": false,
       "type_util": "nomenclature"
-
     },
-
     "vent": {
       "type_widget": "nomenclature",
       "attribut_label": "Vent",
@@ -90,7 +89,7 @@
       "code_nomenclature_type": "METHODE_PROSPECTION",
 	    "required": false,
       "type_util": "nomenclature"
-        },
+    },
     "comments": {
       "type_widget": "textarea",
       "attribut_label": "Commentaire"
@@ -106,14 +105,13 @@
       "values": ["Oui", "Non"]
     },
     "id_dataset": {
-     
       "type_widget": "datalist",
       "attribut_label": "Jeu de données",
       "type_util": "dataset",
       "api": "meta/datasets",
       "application": "GeoNature",
       "keyValue": "id_dataset",
-      "keyLabel": "dataset_shortname",
+      "keyLabel": "dataset_name",
       "params": {
         "orderby": "dataset_name",
         "module_code": "__MODULE.MODULE_CODE"
