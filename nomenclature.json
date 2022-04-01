@@ -453,9 +453,9 @@
     {
       "type":"ACTIVITE_HUMAINE",
       "cd_nomenclature": "ACTIVITE_HUMAINE_1",
-      "mnemonique": "Sports_nautiques",
-      "label_default": "Sports nautiques / base de loisirs",
-      "definition_default": "Sports nautiques / base de loisirs"
+      "mnemonique": "Abreuvement",
+      "label_default": "Abreuvement",
+      "definition_default": "Abreuvement"
     },
     {
       "type":"ACTIVITE_HUMAINE",
@@ -464,13 +464,12 @@
       "label_default": "Pêche de loisirs",
       "definition_default": "Pêche de loisirs"
     },
-
 	{
       "type":"ACTIVITE_HUMAINE",
       "cd_nomenclature": "ACTIVITE_HUMAINE_4",
-      "mnemonique": "Pisciculture",
-      "label_default": "Pisciculture",
-      "definition_default": "Pisciculture"
+      "mnemonique": "Ornemental",
+      "label_default": "Ornemental",
+      "definition_default": "Ornemental"
     },
 	{
       "type":"ACTIVITE_HUMAINE",
@@ -501,7 +500,6 @@
       "label_default": "Autre",
       "definition_default": "Autre "
     },
-	
 	{
       "type":"ACTIVITE_HUMAINE",
       "cd_nomenclature": "ACTIVITE_HUMAINE_9",
