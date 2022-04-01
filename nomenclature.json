@@ -46,11 +46,6 @@
       "definition_default": "Activité humaine(protocôle de suivi POPAmphibien)"
     },
     {
-      "mnemonique": "SITE_PROTEGE",
-      "label_default": "Site protégé",
-      "definition_default": "Site protégé(protocôle de suivi POPAmphibien)"
-    },
-    {
       "mnemonique": "PLUVIOSITE",
       "label_default": "Pluviosité",
       "definition_default": "Pluviosité (protocôle de suivi POPAmphibien)"
@@ -559,86 +554,6 @@
       "label_default": "Activité de conservation de la nature",
       "definition_default": "Activité de conservation de la nature"
     },
-    {
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_1",
-      "mnemonique": "Réserve_Nat",
-      "label_default": "Réserve Naturelle Nationale",
-      "definition_default": "Réserve Naturelle Nationale"
-    },
-    {
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_2",
-      "mnemonique": "Réserve_Régionale",
-      "label_default": "Réserve Naturelle Régionale",
-      "definition_default": "Réserve Naturelle Régionale"
-    },
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_3",
-      "mnemonique": "Arrêté_protection",
-      "label_default": "Arrêté de protection de biotope",
-      "definition_default": "Arrêté de protection de biotope"
-    },
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_4",
-      "mnemonique": "Parc_Régional",
-      "label_default": "Parc Naturel Régional",
-      "definition_default": "Parc Naturel Régional"
-    },
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_5",
-      "mnemonique": "Parc_National",
-      "label_default": "Parc National",
-      "definition_default": "Parc National"
-    },
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_6",
-      "mnemonique": "Conservatoire_Littoral",
-      "label_default": "Conservatoire du Littoral",
-      "definition_default": "Conservatoire du Littoral"
-    },
-	
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_7",
-      "mnemonique": "Forêt_domaniale",
-      "label_default": "Forêt domaniale",
-      "definition_default": "Forêt domaniale"
-    },
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_8",
-      "mnemonique": "Espace_Naturel",
-      "label_default": "Espace Naturel Sensible",
-      "definition_default": "Espace Naturel Sensible "
-    },
-	
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_9",
-      "mnemonique": "Réserve_biologie",
-      "label_default": "Réserve biologie intégrale",
-      "definition_default": "Réserve biologie intégrale"
-    },	
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_10",
-      "mnemonique": "Forêt_communale",
-      "label_default": "Forêt communale",
-      "definition_default": "Forêt communale"
-    },
-	{
-      "type":"SITE_PROTEGE",
-      "cd_nomenclature": "SITE_PROTEGE_11",
-      "mnemonique": "Site_Natura",
-      "label_default": "Site Natura 2000",
-      "definition_default": "Site Natura 2000"
-    },
-
     {
       "type":"PLUVIOSITE",
       "cd_nomenclature": "PLUVIOSITE_1",
