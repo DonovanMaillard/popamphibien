@@ -607,96 +607,24 @@
     },
     {
       "type":"VENT",
-      "cd_nomenclature": "VENT_1",
-      "mnemonique": "Beaufort_0",
-      "label_default": "Beaufort 0",
-      "definition_default": "Calme: Les feuilles des arbres ne témoignent aucun mouvement"
+      "cd_nomenclature": "VENT_0",
+      "mnemonique": "Absence_vent",
+      "label_default": "Absence de vent",
+      "definition_default": "Absence de vent"
     },
     {
       "type":"VENT",
+      "cd_nomenclature": "VENT_1",
+      "mnemonique": "Vent_faible,
+      "label_default": "Vent faible",
+      "definition_default": "Vent faible"
+    },
+	{
+      "type":"VENT",
       "cd_nomenclature": "VENT_2",
-      "mnemonique": "Beaufort_1",
-      "label_default": "Beaufort 1",
-      "definition_default": "Très légère brise: Les girouettes ne s'orientent pas"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_3",
-      "mnemonique": "Beaufort_2",
-      "label_default": "Beaufort 2",
-      "definition_default": "Légère brise: On sent le vent sur le visage. Les feuilles s'agitent. Les girouettes s'orientent"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_4",
-      "mnemonique": "Beaufort_3",
-      "label_default": "Beaufort 3",
-      "definition_default": "Petite brise: Les feuilles sont sans cesse en mouvement"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_5",
-      "mnemonique": "Beaufort_4",
-      "label_default": "Beaufort 4",
-      "definition_default": "Jolie brise: Les poussières s'envolent. Les petites branches plient"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_6",
-      "mnemonique": "Beaufort_5",
-      "label_default": "Beaufort 5",
-      "definition_default": "Bonne brise: Le tronc des arbustes et arbrisseaux en feuilles balance. La cime de tous les arbres est agitée"
-    },
-	
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_7",
-      "mnemonique": "Beaufort_6",
-      "label_default": "Beaufort 6",
-      "definition_default": "Vent frais: On entend siffler le vent. Les branches de large diamètre s'agitent. Les parapluies sont susceptibles de se retourner"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_8",
-      "mnemonique": "Beaufort_7",
-      "label_default": "Beaufort 7",
-      "definition_default": "Grand frais: Tous les arbres balancent. La marche contre le vent peut devenir difficile"
-    },
-	
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_9",
-      "mnemonique": "Beaufort_8",
-      "label_default": "Beaufort 8",
-      "definition_default": "Coup de vent: Les branches sont susceptibles de casser. La marche contre le vent est très difficile, voire impossible"
-    },	
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_10",
-      "mnemonique": "Beaufort_9",
-      "label_default": "Beaufort 9",
-      "definition_default": "Fort coup de vent: Le vent peut légèrement endommager les bâtiments : envols de tuiles, d'ardoises, chutes de cheminées"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_11",
-      "mnemonique": "Beaufort_10",
-      "label_default": "Beaufort 10",
-      "definition_default": "Tempête: Dégâts importants aux bâtiments. Les toits sont susceptibles de s'envoler. Certains arbres sont déracinés"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_12",
-      "mnemonique": "Beaufort_11",
-      "label_default": "Beaufort 11",
-      "definition_default": "Violente tempête: Ravages étendus et importants"
-    },
-	{
-      "type":"VENT",
-      "cd_nomenclature": "VENT_13",
-      "mnemonique": "Beaufort_12",
-      "label_default": "Beaufort 12",
-      "definition_default": "Ouragan: Dégâts très importants de l'ordre de la catastrophe naturelle"
+      "mnemonique": "Vent_fprt",
+      "label_default": "Vent fort",
+      "definition_default": "Vent fort"
     },
     {
       "type":"NOMBRE_ESTIME",
