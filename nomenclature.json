@@ -384,22 +384,22 @@
       "type":"RIVES",
       "cd_nomenclature": "RIVES_1",
       "mnemonique": "Rives_nues",
-      "label_default": "Rives nues",
-      "definition_default": "Rives nues"
+      "label_default": "Rives majoritairement nues",
+      "definition_default": "Rives majoritairement nues"
     },
     {
       "type":"RIVES",
       "cd_nomenclature": "RIVES_2",
       "mnemonique": "végétation_herbacée",
-      "label_default": "Rives avec végétation herbacée",
-      "definition_default": "Rives avec végétation herbacée"
+      "label_default": "Rives avec une majorité de végétation herbacée",
+      "definition_default": "Rives avec une majorité de végétation herbacée"
     },
     {
       "type":"RIVES",
       "cd_nomenclature": "RIVES_3",
       "mnemonique": "végétation_ligneuse",
-      "label_default": "Rives avec végétation ligneuse",
-      "definition_default": "Rives avec végétation ligneuse"
+      "label_default": "Rives avec une majorité de végétation ligneuse",
+      "definition_default": "Rives avec une majorité de végétation ligneuse"
     },
     {
       "type":"HABITAT_TERRESTRE",
