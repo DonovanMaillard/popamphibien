@@ -51,9 +51,9 @@
       "definition_default": "Pluviosité (protocôle de suivi POPAmphibien)"
     },
     {
-      "mnemonique": "ENSOLEILLEMENT",
-      "label_default": "ensoleillement",
-      "definition_default": "ensoleillement (protocôle de suivi POPAmphibien)"
+      "mnemonique": "COUVERTURE_NUAGEUSE",
+      "label_default": "Couverture nuageuse",
+      "definition_default": "couverture nuageuse (protocôle de suivi POPAmphibien)"
     },
     {
       "mnemonique": "METHODE_PROSPECTION",
@@ -70,7 +70,6 @@
       "label_default": "Nombre (estimé)",
       "definition_default": "Nombre (estimé) (protocôle de suivi POPAmphibien)"
     } 
-    
   ],
   "nomenclatures": [
     {
@@ -115,7 +114,6 @@
       "label_default": "Grand cours d’eau (> 10 m de large)",
       "definition_default": "Grand cours d’eau (> 10 m de large)"
     },
-	
 	{
       "type":"MILIEU_AQUATIQUE",
       "cd_nomenclature": "MILIEU_AQUATIQUE_7",
@@ -128,9 +126,8 @@
       "cd_nomenclature": "MILIEU_AQUATIQUE_8",
       "mnemonique": "Fossé",
       "label_default": "Fossé",
-      "definition_default": "Fossé "
+      "definition_default": "Fossé"
     },
-	
 	{
       "type":"MILIEU_AQUATIQUE",
       "cd_nomenclature": "MILIEU_AQUATIQUE_9",
@@ -145,7 +142,6 @@
       "label_default": "Marais / Tourbière",
       "definition_default": "Marais / Tourbière"
     },	
-	
 	{
       "type":"MILIEU_AQUATIQUE",
       "cd_nomenclature": "MILIEU_AQUATIQUE_11",
@@ -237,7 +233,6 @@
       "label_default": "Terres arables",
       "definition_default": "Terres arables"
     },
-	
 	{
       "type":"CATEGORIE_PAYSAGERE",
       "cd_nomenclature": "CATEGORIE_PAYSAGERE_7",
@@ -252,7 +247,6 @@
       "label_default": "Cultures permanentes",
       "definition_default": "Cultures permanentes "
     },
-	
 	{
       "type":"CATEGORIE_PAYSAGERE",
       "cd_nomenclature": "CATEGORIE_PAYSAGERE_9",
@@ -267,7 +261,6 @@
       "label_default": "Milieux à végétation arbustive et/ou herbacée",
       "definition_default": "Milieux à végétation arbustive et/ou herbacée"
     },	
-	
 	{
       "type":"CATEGORIE_PAYSAGERE",
       "cd_nomenclature": "CATEGORIE_PAYSAGERE_11",
@@ -543,29 +536,29 @@
       "definition_default": "Aucune"
     },
     {
-      "type":"ENSOLEILLEMENT",
-      "cd_nomenclature": "ENSOLEILLEMENT_1",
+      "type":"COUVERTURE_NUAGEUSE",
+      "cd_nomenclature": "COUVERTURE_NUAGEUSE_1",
       "mnemonique": "0-25",
       "label_default": "0-25 %",
       "definition_default": "0-25 %"
     },
     {
-      "type":"ENSOLEILLEMENT",
-      "cd_nomenclature": "ENSOLEILLEMENT_2",
+      "type":"COUVERTURE_NUAGEUSE",
+      "cd_nomenclature": "COUVERTURE_NUAGEUSE_2",
       "mnemonique": "25-50",
       "label_default": "25-50 %",
       "definition_default": "25-50 % "
     },
 	{
-      "type":"ENSOLEILLEMENT",
-      "cd_nomenclature": "ENSOLEILLEMENT_3",
+      "type":"COUVERTURE_NUAGEUSE",
+      "cd_nomenclature": "COUVERTURE_NUAGEUSE_3",
       "mnemonique": "50-75",
       "label_default": "50-75 %",
       "definition_default": "50-75 %"
     },
 	{
-      "type":"ENSOLEILLEMENT",
-      "cd_nomenclature": "ENSOLEILLEMENT_4",
+      "type":"COUVERTURE_NUAGEUSE",
+      "cd_nomenclature": "COUVERTURE_NUAGEUSE_4",
       "mnemonique": "75-100",
       "label_default": "75-100 %",
       "definition_default": "75-100 %"
