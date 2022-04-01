@@ -38,9 +38,10 @@
   ],
   "specific": {
     "num_passage": {
-      "type_widget": "text",
+      "type_widget": "select",
       "required": true,
-      "attribut_label": "Numéro de passage"
+      "attribut_label": "Numéro de passage",
+      "values": ["1", "2", "3"]
     },
     "id_base_site": {
       "type_widget": "site",
