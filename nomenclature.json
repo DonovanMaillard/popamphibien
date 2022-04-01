@@ -36,9 +36,9 @@
       "definition_default": "Rives (protocôle de suivi POPAmphibien)"
     },
     {
-      "mnemonique": "HABITAT_TERRESTRE",
-      "label_default": "Habitat terrestre environnant",
-      "definition_default": "Habitat terrestre environnant(protocôle de suivi POPAmphibien)"
+      "mnemonique": "HABITAT_TERRESTRE_MAJORITAIRE",
+      "label_default": "Habitat terrestre environnant majoritaire",
+      "definition_default": "Habitat terrestre environnant majoritaire(protocôle de suivi POPAmphibien)"
     },
     {
       "mnemonique": "ACTIVITE_HUMAINE",
@@ -402,91 +402,53 @@
       "definition_default": "Rives avec une majorité de végétation ligneuse"
     },
     {
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_1",
-      "mnemonique": "Forêt_feuillus",
-      "label_default": "Forêt de feuillus",
-      "definition_default": "Forêt de feuillus"
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_1",
+      "mnemonique": "Forêt",
+      "label_default": "Forêt",
+      "definition_default": "Forêt"
     },
     {
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_2",
-      "mnemonique": "Forêt_conifères",
-      "label_default": "Forêt de conifères",
-      "definition_default": "Forêt de conifères"
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_2",
+      "mnemonique": "Buisson_haie",
+      "label_default": "Buisson / haie (< 5 m de hauteur)",
+      "definition_default": "Buisson / haie (< 5 m de hauteur)"
     },
 	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_3",
-      "mnemonique": "Forêt_mixte",
-      "label_default": "Forêt mixte",
-      "definition_default": "Forêt mixte"
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_3",
+      "mnemonique": "Milieu_agricole_1",
+      "label_default": "Milieu agricole (prairie, élevage)",
+      "definition_default": "Milieu agricole (prairie, élevage)"
     },
 	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_4",
-      "mnemonique": "Buissons",
-      "label_default": "Buissons / haies (< 5m de hauteur)",
-      "definition_default": "Buissons / haies (< 5m de hauteur)"
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_4",
+      "mnemonique": "Milieu_agricole_2",
+      "label_default": "Milieu agricole (culture, autre)",
+      "definition_default": "Milieu agricole (culture, autre)"
     },
 	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_5",
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_5",
       "mnemonique": "Milieu_ouvert",
-      "label_default": "Milieu ouvert non agricole (landes, steppes)",
-      "definition_default": "Milieu ouvert non agricole (landes, steppes)"
+      "label_default": "Milieu ouvert non agricole (lande, steppe)",
+      "definition_default": "Milieu ouvert non agricole (lande, steppe)"
     },
 	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_6",
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_6",
       "mnemonique": "Sol_sans_végétation",
       "label_default": "Sol sans végétation (dune, sol rocheux)",
       "definition_default": "Sol sans végétation (dune, sol rocheux)"
     },
-	
 	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_7",
-      "mnemonique": "Urbains",
-      "label_default": "Urbains, espaces verts",
-      "definition_default": "Urbains, espaces verts"
-    },
-	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_8",
-      "mnemonique": "Milieu_agricole",
-      "label_default": "Milieu agricole - prairie",
-      "definition_default": "Milieu agricole - prairie "
-    },
-	
-	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_9",
-      "mnemonique": "grande_culture",
-      "label_default": "Milieu agricole – grande culture",
-      "definition_default": "Milieu agricole – grande culture"
-    },	
-	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_10",
-      "mnemonique": "vergers",
-      "label_default": "Milieu agricole – vergers, vignes, maraichers",
-      "definition_default": "Milieu agricole – vergers, vignes, maraichers"
-    },	
-	
-	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_11",
-      "mnemonique": "élevage",
-      "label_default": "Milieu agricole – élevage",
-      "definition_default": "Milieu agricole – élevage"
-    },
-	{
-      "type":"HABITAT_TERRESTRE",
-      "cd_nomenclature": "HABITAT_TERRESTRE_12",
-      "mnemonique": "autre",
-      "label_default": "Milieu agricole – autre",
-      "definition_default": "Milieu agricole – autre"
+      "type":"HABITAT_TERRESTRE_MAJORITAIRE",
+      "cd_nomenclature": "HABITAT_TERRESTRE_MAJORITAIRE_7",
+      "mnemonique": "Zone_urbaine",
+      "label_default": "Zone urbaine, espace vert",
+      "definition_default": "Zone urbaine, espace vert"
     },
     {
       "type":"ACTIVITE_HUMAINE",
