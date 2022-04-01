@@ -7,8 +7,6 @@
     "observers",
     "num_passage",
     "visit_date_min",
-    "temperature_air",
-    "temperature_eau",
     "pluviosite",
     "couverture_nuageuse",
     "vent",
@@ -26,8 +24,6 @@
   "keep": [
     "observers",
     "visit_date_min",
-    "temperature_air",
-    "temperature_eau",
     "pluviosite",
     "couverture_nuageuse",
     "vent",
@@ -48,20 +44,6 @@
       "required": true,
       "attribut_label": "Site"
     },
-    "temperature_air": {
-      "type_widget": "number",
-      "attribut_label": "Température de l’air (en °C)",
-      "required": false,
-      "min": -25,
-      "max": 60
-    },
-    "temperature_eau": {
-      "type_widget": "number",
-      "attribut_label": "Température de l’eau (en °C)",
-      "required": false,
-      "min": -25,
-      "max": 60
-    },
     "pluviosite": {
       "type_widget": "nomenclature",
       "attribut_label": "Pluviosité",
@@ -69,15 +51,13 @@
 	    "required": false,
       "type_util": "nomenclature"
     },
-    "ensoleillement": {
+    "couverture_nuageuse": {
       "type_widget": "nomenclature",
-      "attribut_label": "Ensoleillement (% de recouvrement nuageux)",
-      "code_nomenclature_type": "ENSOLEILLEMENT",
+      "attribut_label": "Couverture nuageuse",
+      "code_nomenclature_type": "COUVERTURE_NUAGEUSE",
 	    "required": false,
       "type_util": "nomenclature"
-
     },
-
     "vent": {
       "type_widget": "nomenclature",
       "attribut_label": "Vent",
