@@ -29,7 +29,7 @@
   "keep": [
     "observers",
     "visit_date_min",
-    "accessibility',
+    "accessibility",
     "pluviosite",
     "couverture_nuageuse",
     "vent",
