@@ -3,13 +3,17 @@
   "label": "Passage",
   "label_list": "Passages",
   "display_properties": [
-
     "observers",
     "num_passage",
     "visit_date_min",
     "pluviosite",
     "couverture_nuageuse",
     "vent",
+    "turbidite",
+    "vegetation_aquatique_principale", 
+    "rives",
+    "habitat_terrestre_environnant", 
+    "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
     "presence_poisson",
@@ -27,24 +31,40 @@
     "pluviosite",
     "couverture_nuageuse",
     "vent",
+    "turbidite",
+    "vegetation_aquatique_principale", 
+    "rives",
+    "habitat_terrestre_environnant", 
+    "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
     "presence_poisson",
     "comments"
   ],
   "specific": {
-    "num_passage": {
-      "type_widget": "number",
-      "required": true,
-      "attribut_label": "Numéro de passage",
-      "min": 1,
-      "max":3
-    },
     "id_base_site": {
       "type_widget": "site",
       "required": true,
       "attribut_label": "Site"
     },
+    "num_passage": {
+      "type_widget": "select",
+      "required": true,
+      "attribut_label": "Numéro de passage",
+      "values": ["1", "2", "3"]
+    },
+    "visit_date_min": {
+      "type_widget": "date",
+      "attribut_label": "Date du passage",
+      "required": true
+    },
+    "accessibility": {
+       "type_widget": "radio",
+       "required": true,
+       "attribut_label": "Le site est accessible",
+       "values": ["Oui", "Non"],
+       "default": "Oui"
+    }
     "pluviosite": {
       "type_widget": "nomenclature",
       "attribut_label": "Pluviosité",
@@ -66,14 +86,50 @@
 	    "required": false,
       "type_util": "nomenclature"    
     },
+    "turbidite": {
+      "type_widget": "nomenclature",
+      "attribut_label": "Turbidité",
+      "code_nomenclature_type": "TURBIDITE",
+	    "required": false,
+      "type_util": "nomenclature"
+    },
+    "vegetation_aquatique_principale": {
+      "type_widget": "nomenclature",
+      "attribut_label": "Végétation aquatique principale",
+      "code_nomenclature_type": "VEGETATION_AQUATIQUE",
+	    "required": false,
+      "type_util": "nomenclature"
+    },
+    "rives": {
+      "type_widget": "nomenclature",
+      "attribut_label": "Rives",
+      "code_nomenclature_type": "RIVES",
+	    "required": false,
+      "type_util": "nomenclature",
+      "title":"Indiquer la catégorie majoritaire"
+    },
+    "habitat_terrestre_environnant": {
+      "type_widget": "nomenclature",
+      "attribut_label": "Habitat terrestre environnant",
+      "code_nomenclature_type": "HABITAT_TERRESTRE",
+	    "required": false,
+      "type_util": "nomenclature",
+      "title":"Indiquer la catégorie majoritaire"
+    },
+    "activite_humaine": {
+      "type_widget": "nomenclature",
+      "attribut_label": "Activité humaine",
+      "code_nomenclature_type": "ACTIVITE_HUMAINE",
+	    "required": false,
+      "type_util": "nomenclature"
+    },
     "methode_de_prospection": {
       "type_widget": "nomenclature",
       "attribut_label": "Méthode de prospection",
       "code_nomenclature_type": "METHODE_PROSPECTION",
 	    "required": true,
-      "type_util": "nomenclature", 
-      "multiple": true
-        },
+      "type_util": "nomenclature"
+    },
     "comments": {
       "type_widget": "textarea",
       "attribut_label": "Commentaire"
@@ -103,11 +159,6 @@
       "data_path": "data",
       "required": true
     },  
-     "visit_date_min": {
-      "type_widget": "date",
-      "attribut_label": "Date du passage",
-      "required": true
-    },
     "nb_observations": {
       "attribut_label": "Nb. d'observations"
     }
