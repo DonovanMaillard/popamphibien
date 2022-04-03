@@ -73,7 +73,7 @@
       "code_nomenclature_type": "PLUVIOSITE",
 	    "required": false,
       "type_util": "nomenclature", 
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "couverture_nuageuse": {
       "type_widget": "nomenclature",
@@ -81,7 +81,7 @@
       "code_nomenclature_type": "COUVERTURE_NUAGEUSE",
 	    "required": false,
       "type_util": "nomenclature",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "vent": {
       "type_widget": "nomenclature",
@@ -89,7 +89,7 @@
       "code_nomenclature_type": "VENT",
 	    "required": false,
       "type_util": "nomenclature" ,
-      "hidden":"({value}) => value.accessibility != 'Non'"   
+      "hidden":"({value}) => value.accessibility === 'Non'"   
     },
     "turbidite": {
       "type_widget": "nomenclature",
@@ -97,7 +97,7 @@
       "code_nomenclature_type": "TURBIDITE",
 	    "required": false,
       "type_util": "nomenclature",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "vegetation_aquatique_principale": {
       "type_widget": "nomenclature",
@@ -105,7 +105,7 @@
       "code_nomenclature_type": "VEGETATION_AQUATIQUE",
 	    "required": false,
       "type_util": "nomenclature",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "rives": {
       "type_widget": "nomenclature",
@@ -114,7 +114,7 @@
 	    "required": false,
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "habitat_terrestre_environnant": {
       "type_widget": "nomenclature",
@@ -123,7 +123,7 @@
 	    "required": false,
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "activite_humaine": {
       "type_widget": "nomenclature",
@@ -131,7 +131,7 @@
       "code_nomenclature_type": "ACTIVITE_HUMAINE",
 	    "required": false,
       "type_util": "nomenclature",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "methode_de_prospection": {
       "type_widget": "nomenclature",
@@ -139,7 +139,7 @@
       "code_nomenclature_type": "METHODE_PROSPECTION",
 	    "required": true,
       "type_util": "nomenclature",
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "comments": {
       "type_widget": "textarea",
@@ -149,13 +149,13 @@
       "type_widget": "radio",
       "attribut_label": "Présence d’amphibiens",
       "values": ["Oui", "Non"],
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "presence_poisson": {
       "type_widget": "radio",
       "attribut_label": "Présence de poissons",
       "values": ["Oui", "Non"],
-      "hidden":"({value}) => value.accessibility != 'Non'"
+      "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "id_dataset": {
       "type_widget": "datalist",
