@@ -608,7 +608,7 @@
     {
       "type":"VENT",
       "cd_nomenclature": "VENT_1",
-      "mnemonique": "Vent_faible,
+      "mnemonique": "Vent_faible",
       "label_default": "Vent faible",
       "definition_default": "Vent faible"
     },
