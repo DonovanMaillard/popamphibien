@@ -3,18 +3,12 @@
   "geometry_type": "Point",
   "map_label_field_name": "base_site_name",
   "display_properties": [
-
     "id_inventor",
     "first_use_date",
     "base_site_name",
     "milieu_aquatique",
-    "turbidite",
     "variation_eau",
     "courant",
-    "vegetation_aquatique_principale",
-    "rives",
-    "habitat_terrestre_environnant",
-    "activite_humaine",
     "base_site_description"
   ],
   "display_list": [
@@ -24,13 +18,11 @@
     "nb_visits"
   ],
   "specific": {
-
     "base_site_description": {
       "type_widget": "textarea",
       "attribut_label": "Commentaire"
 
     },
-
     "milieu_aquatique": {
       "type_widget": "nomenclature",
       "attribut_label": "Description du milieu aquatique",
@@ -39,14 +31,6 @@
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire"
     },
-    "turbidite": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Turbidité",
-      "code_nomenclature_type": "TURBIDITE",
-	    "required": false,
-      "type_util": "nomenclature"
-    },
-
     "variation_eau": {
       "type_widget": "nomenclature",
       "attribut_label": "Variation du niveau d’eau",
@@ -58,36 +42,6 @@
       "type_widget": "nomenclature",
       "attribut_label": "Courant d’eau",
       "code_nomenclature_type": "COURANT_EAU",
-	    "required": false,
-      "type_util": "nomenclature"
-    },
-    "vegetation_aquatique_principale": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Végétation aquatique principale",
-      "code_nomenclature_type": "VEGETATION_AQUATIQUE",
-	    "required": false,
-      "type_util": "nomenclature"
-    },
-    "rives": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Rives",
-      "code_nomenclature_type": "RIVES",
-	    "required": false,
-      "type_util": "nomenclature",
-      "title":"Indiquer la catégorie majoritaire"
-    },
-    "habitat_terrestre_environnant": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Habitat terrestre environnant",
-      "code_nomenclature_type": "HABITAT_TERRESTRE",
-	    "required": false,
-      "type_util": "nomenclature",
-      "title":"Indiquer la catégorie majoritaire"
-    },
-    "activite_humaine": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Activité humaine",
-      "code_nomenclature_type": "ACTIVITE_HUMAINE",
 	    "required": false,
       "type_util": "nomenclature"
     },
@@ -120,7 +74,6 @@
         "required": false,
         "hidden": true
       },
-
     "id_nomenclature_type_site": {
       "type_widget": "text",
       "attribut_label": "Type site",
@@ -131,8 +84,5 @@
       },
       "hidden": true
     }
-
-
-
   }
 }
