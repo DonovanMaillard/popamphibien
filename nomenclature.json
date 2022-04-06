@@ -473,7 +473,6 @@
       "label_default": "Extraction de matériaux (carrière)",
       "definition_default": "Extraction de matériaux (carrière)"
     },
-	
 	{
       "type":"ACTIVITE_HUMAINE",
       "cd_nomenclature": "ACTIVITE_HUMAINE_7",
@@ -610,7 +609,7 @@
 	{
       "type":"VENT",
       "cd_nomenclature": "VENT_2",
-      "mnemonique": "Vent_fprt",
+      "mnemonique": "Vent_fort",
       "label_default": "Vent fort",
       "definition_default": "Vent fort"
     }
