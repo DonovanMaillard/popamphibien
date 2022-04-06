@@ -6,6 +6,7 @@
     "observers",
     "num_passage",
     "visit_date_min",
+    "id_dataset",
     "accessibility",
     "pluviosite",
     "couverture_nuageuse",
@@ -17,7 +18,6 @@
     "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
-    "presence_poisson",
     "comments"
   ],
   "display_list": [
@@ -29,6 +29,7 @@
   "keep": [
     "observers",
     "visit_date_min",
+    "id_dataset",
     "accessibility",
     "pluviosite",
     "couverture_nuageuse",
@@ -40,7 +41,6 @@
     "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
-    "presence_poisson",
     "comments"
   ],
   "specific": {
@@ -60,12 +60,27 @@
       "attribut_label": "Date du passage",
       "required": true
     },
+    "id_dataset": {
+      "type_widget": "datalist",
+      "attribut_label": "Jeu de données",
+      "type_util": "dataset",
+      "api": "meta/datasets",
+      "application": "GeoNature",
+      "keyValue": "id_dataset",
+      "keyLabel": "dataset_name",
+      "params": {
+        "orderby": "dataset_name",
+        "module_code": "__MODULE.MODULE_CODE"
+      },
+      "data_path": "data",
+      "required": true
+    },  
     "accessibility": {
        "type_widget": "radio",
        "required": true,
        "attribut_label": "Le site est accessible",
        "values": ["Oui", "Non"],
-       "default": "Oui"
+       "value": "Oui"
     },
     "pluviosite": {
       "type_widget": "nomenclature",
@@ -95,7 +110,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Turbidité",
       "code_nomenclature_type": "TURBIDITE",
-	    "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
       "type_util": "nomenclature",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
@@ -103,7 +118,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Végétation aquatique principale",
       "code_nomenclature_type": "VEGETATION_AQUATIQUE",
-	    "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
       "type_util": "nomenclature",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
@@ -111,7 +126,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Rives",
       "code_nomenclature_type": "RIVES",
-	    "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
       "hidden":"({value}) => value.accessibility === 'Non'"
@@ -120,7 +135,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Habitat terrestre environnant",
       "code_nomenclature_type": "HABITAT_TERRESTRE",
-	    "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
       "hidden":"({value}) => value.accessibility === 'Non'"
@@ -129,7 +144,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Activité humaine",
       "code_nomenclature_type": "ACTIVITE_HUMAINE",
-	    "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
       "type_util": "nomenclature",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
@@ -149,29 +164,9 @@
       "type_widget": "radio",
       "attribut_label": "Présence d’amphibiens",
       "values": ["Oui", "Non"],
+      "required": "({value}) => value.accessibility === 'Oui'",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
-    "presence_poisson": {
-      "type_widget": "radio",
-      "attribut_label": "Présence de poissons",
-      "values": ["Oui", "Non"],
-      "hidden":"({value}) => value.accessibility === 'Non'"
-    },
-    "id_dataset": {
-      "type_widget": "datalist",
-      "attribut_label": "Jeu de données",
-      "type_util": "dataset",
-      "api": "meta/datasets",
-      "application": "GeoNature",
-      "keyValue": "id_dataset",
-      "keyLabel": "dataset_name",
-      "params": {
-        "orderby": "dataset_name",
-        "module_code": "__MODULE.MODULE_CODE"
-      },
-      "data_path": "data",
-      "required": true
-    },  
     "nb_observations": {
       "attribut_label": "Nb. d'observations"
     }
