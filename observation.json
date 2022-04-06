@@ -87,7 +87,7 @@
       "type_widget": "number",
       "attribut_label": "Nombre maximum",
       "required": "({value}) => value.count_min !=1",
-      "min": "({value}) => value.count_min",
+      "min": "({value}) => value.count_min"
     },
     "comments": {
       "type_widget": "textarea",
