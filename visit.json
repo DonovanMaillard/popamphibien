@@ -134,7 +134,7 @@
     "habitat_terrestre_environnant": {
       "type_widget": "nomenclature",
       "attribut_label": "Habitat terrestre environnant",
-      "code_nomenclature_type": "HABITAT_TERRESTRE",
+      "code_nomenclature_type": "HABITAT_TERRESTRE_MAJORITAIRE",
       "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1'",
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
