@@ -18,6 +18,7 @@
     "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
+    "presence_poisson",
     "comments"
   ],
   "display_list": [
@@ -41,6 +42,7 @@
     "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
+    "presence_poisson",
     "comments"
   ],
   "specific": {
@@ -74,7 +76,7 @@
       },
       "data_path": "data",
       "required": true
-    },  
+    }, 
     "accessibility": {
        "type_widget": "radio",
        "required": true,
@@ -102,7 +104,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Vent",
       "code_nomenclature_type": "VENT",
-	    "required": false,
+      "required": false,
       "type_util": "nomenclature" ,
       "hidden":"({value}) => value.accessibility === 'Non'"   
     },
@@ -149,11 +151,19 @@
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "methode_de_prospection": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Méthode de prospection",
-      "code_nomenclature_type": "METHODE_PROSPECTION",
-	    "required": true,
+      "type_widget": "datalist",
+      "attribut_label": "Méthode(s) de prospection",
+      "api": "nomenclatures/nomenclature/METHODE_PROSPECTION",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "multiple": true,
+      "data_path": "values",
       "type_util": "nomenclature",
+      "required": "({value}) => value.accessibility === 'Oui'",
+      "default": {
+        "cd_nomenclature": "1"
+      },
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
     "comments": {
@@ -166,7 +176,7 @@
       "values": ["Oui", "Non"],
       "required": "({value}) => value.accessibility === 'Oui'",
       "hidden":"({value}) => value.accessibility === 'Non'"
-    },
+    }, 
     "nb_observations": {
       "attribut_label": "Nb. d'observations"
     }
