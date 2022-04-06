@@ -18,7 +18,6 @@
     "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
-    "presence_poisson",
     "comments"
   ],
   "display_list": [
@@ -42,7 +41,6 @@
     "activite_humaine",
     "methode_de_prospection",
     "presence_amphibien",
-    "presence_poisson",
     "comments"
   ],
   "specific": {
