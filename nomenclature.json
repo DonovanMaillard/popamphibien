@@ -64,12 +64,7 @@
       "mnemonique": "VENT",
       "label_default": "Vent",
       "definition_default": "vent (protocôle de suivi POPAmphibien)"
-    },
-    {
-      "mnemonique": "NOMBRE_ESTIME",
-      "label_default": "Nombre (estimé)",
-      "definition_default": "Nombre (estimé) (protocôle de suivi POPAmphibien)"
-    } 
+    }
   ],
   "nomenclatures": [
     {
@@ -618,34 +613,6 @@
       "mnemonique": "Vent_fprt",
       "label_default": "Vent fort",
       "definition_default": "Vent fort"
-    },
-    {
-      "type":"NOMBRE_ESTIME",
-      "cd_nomenclature": "VENT_1",
-      "mnemonique": "nombre_1",
-      "label_default": "De 1 à 5",
-      "definition_default": "De 1 à 5"
-    },
-    {
-      "type":"NOMBRE_ESTIME",
-      "cd_nomenclature": "VENT_2",
-      "mnemonique": "nombre_2",
-      "label_default": "De 6 à 10",
-      "definition_default": "De 6 à 10"
-    },
-	{
-      "type":"NOMBRE_ESTIME",
-      "cd_nomenclature": "VENT_3",
-      "mnemonique": "nombre_3",
-      "label_default": "De 10 à 50",
-      "definition_default": "De 10 à 50"
-    },
-	{
-      "type":"NOMBRE_ESTIME",
-      "cd_nomenclature": "nombre_4",
-      "mnemonique": "nombre_4",
-      "label_default": "De 50 à 100",
-      "definition_default": "De 50 à 100"
     }
   ]
 }
