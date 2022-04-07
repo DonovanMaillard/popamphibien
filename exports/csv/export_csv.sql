@@ -19,7 +19,7 @@ SELECT
     ref_nomenclatures.get_nomenclature_label(((sc.data::json #> '{milieu_aquatique}'::text[])::text)::integer,'fr') AS milieu_aquatique,
     ref_nomenclatures.get_nomenclature_label(((sc.data::json #> '{variation_eau}'::text[])::text)::integer,'fr') AS variation_eau,
     ref_nomenclatures.get_nomenclature_label(((sc.data::json #> '{courant}'::text[])::text)::integer,'fr') AS courant,
-    com.area_name AS communes,
+    com.area_name AS commune,
     string_agg(distinct(sp.area_name)||'('||bat.type_code||')', ', ') AS site_protege,
     -- Informations sur la visite
     v.uuid_base_visit AS uuid_visite,
