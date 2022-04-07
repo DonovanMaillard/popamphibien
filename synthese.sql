@@ -21,7 +21,7 @@
 
 DROP VIEW IF EXISTS gn_monitoring.v_synthese_:module_code;
 
-CREATE OR REPLACE VIEW gn_monitoring.v_synthese_:module_code;
+CREATE OR REPLACE VIEW gn_monitoring.v_synthese_:module_code
 AS WITH source AS (
          SELECT id_source
            FROM gn_synthese.t_sources
