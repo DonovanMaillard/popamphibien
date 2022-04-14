@@ -34,16 +34,16 @@ AS WITH source AS (
     o.id_observation AS entity_source_pk_value,
     v.id_dataset,
     ref_nomenclatures.get_id_nomenclature('METH_OBS'::character varying, '20'::character varying) AS id_nomenclature_obs_meth, 
-    ((oc.data::json #> '{id_nomenclature_stade}'::text[])::text)::integer AS id_nomenclature_life_stage,
-    ((oc.data::json #> '{id_nomenclature_sex}'::text[])::text)::integer AS id_nomenclature_sex,
+    nullif(json_extract_path(oc.data::json,'id_nomenclature_stade')::text,'null')::integer AS id_nomenclature_life_stage,
+    nullif(json_extract_path(oc.data::json,'id_nomenclature_sex')::text,'null')::integer AS id_nomenclature_sex,
     ref_nomenclatures.get_id_nomenclature('OBJ_DENBR'::character varying, 'IND'::character varying) AS id_nomenclature_obj_count,
-    ((oc.data::json #> '{id_nomenclature_typ_denbr}'::text[])::text)::integer AS id_nomenclature_type_count,
+    nullif(json_extract_path(oc.data::json,'id_nomenclature_typ_denbr')::text, 'null')::integer AS id_nomenclature_type_count,
     ref_nomenclatures.get_id_nomenclature('STATUT_OBS'::character varying, 'Pr'::character varying) AS id_nomenclature_observation_status,
     ref_nomenclatures.get_id_nomenclature('ETAT_BIO'::character varying, '1'::character varying) as id_nomenclature_bio_condition,
     ref_nomenclatures.get_id_nomenclature('STATUT_SOURCE'::character varying, 'Te'::character varying) AS id_nomenclature_source_status,
     ref_nomenclatures.get_id_nomenclature('TYP_INF_GEO'::character varying, '1'::character varying) AS id_nomenclature_info_geo_type,
-    ((oc.data::json #> '{count_min}'::text[])::text)::integer AS count_min,
-    ((oc.data::json #> '{count_max}'::text[])::text)::integer AS count_max,
+    nullif(((oc.data::json #> '{count_min}'::text[])::text),'null')::integer AS count_min,
+    nullif(((oc.data::json #> '{count_max}'::text[])::text),'null')::integer AS count_max,
     o.id_observation,
     o.cd_nom,
     t.nom_complet AS nom_cite,
@@ -64,25 +64,27 @@ AS WITH source AS (
     v.id_base_site,
     v.id_base_visit, 
     json_build_object(
+    	'aire_etude', tsg.sites_group_name,
         'nom_site', s.base_site_name,
-        'milieu_aquatique', ref_nomenclatures.get_nomenclature_label(((sc.data::json #> '{milieu_aquatique}'::text[])::text)::integer,'fr'),
-        'variation_eau', ref_nomenclatures.get_nomenclature_label(((sc.data::json #> '{variation_eau}'::text[])::text)::integer,'fr'),
-        'courant', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{courant}'::text[])::text)::integer,'fr'),
-    	'num_passage', (vc.data::json #> '{num_passage}'::text[]), 
+        'milieu_aquatique', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(sc.data::json,'milieu_aquatique')::text,'null')::integer, 'fr'),
+        'variation_eau', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(sc.data::json,'variation_eau')::text,'null')::integer, 'fr'),
+        'courant',  ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(sc.data::json,'courant')::text,'null')::integer, 'fr'),
+    	'num_passage', replace(nullif(json_extract_path(vc.data::json,'num_passage')::text,'null'),'"','')::integer, 
     	'accessibilite', (vc.data::json #> '{accessibility}'::text[]),
-    	'pluviosite', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{pluviosite}'::text[])::text)::integer,'fr'),
-    	'couverture_nuageuse', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{couverture_nuageuse}'::text[])::text)::integer,'fr'),
-    	'vent', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{vent}'::text[])::text)::integer,'fr'),
-    	'turbidite', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{turbidite}'::text[])::text)::integer,'fr'),
-    	'vegetation_aquatique_principale', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{vegetation_aquatique_principale}'::text[])::text)::integer,'fr'),
-    	'rives', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{rives}'::text[])::text)::integer,'fr'),
-    	'habitat_terrestre_environnant', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{habitat_terrestre_environnant}'::text[])::text)::integer,'fr'),
-    	'activite_humaine', ref_nomenclatures.get_nomenclature_label(((vc.data::json #> '{activite_humaine}'::text[])::text)::integer,'fr')
+    	'pluviosite', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'pluviosite')::text,'null')::integer, 'fr'),
+    	'couverture_nuageuse', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'couverture_nuageuse')::text,'null')::integer, 'fr'),
+    	'vent', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'vent')::text,'null')::integer, 'fr'),
+    	'turbidite', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'turbidite')::text,'null')::integer, 'fr'),
+    	'vegetation_aquatique_principale', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'vegetation_aquatique_principale')::text,'null')::integer, 'fr'),
+    	'rives', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'rives')::text,'null')::integer, 'fr'),
+    	'habitat_terrestre_environnant', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'habitat_terrestre_environnant')::text,'null')::integer, 'fr'),
+    	'activite_humaine', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'activite_humaine')::text,'null')::integer, 'fr')
     	) as additional_data
    FROM gn_monitoring.t_base_visits v
-   	 join gn_monitoring.t_visit_complements vc on v.id_base_visit = vc.id_base_visit 
+   	 JOIN gn_monitoring.t_visit_complements vc on v.id_base_visit = vc.id_base_visit 
      JOIN gn_monitoring.t_base_sites s ON s.id_base_site = v.id_base_site
-     join gn_monitoring.t_site_complements sc on sc.id_base_site = s.id_base_site 
+     JOIN gn_monitoring.t_site_complements sc on sc.id_base_site = s.id_base_site
+     JOIN gn_monitoring.t_sites_groups tsg ON sc.id_sites_group = tsg.id_sites_group
      JOIN gn_commons.t_modules m ON m.id_module = v.id_module
      JOIN gn_monitoring.t_observations o ON o.id_base_visit = v.id_base_visit
      JOIN gn_monitoring.t_observation_complements oc ON oc.id_observation = o.id_observation
