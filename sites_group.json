@@ -10,7 +10,6 @@
     }
   ],
   "display_properties": [
-    "id_dataset",
     "id_inventor",
     "commune",
     "sites_group_name",
@@ -30,21 +29,6 @@
       "keyValue": "id_role",
       "keyLabel": "nom_complet",
       "type_util": "user",
-      "required": true
-    },
-    "id_dataset": {
-      "type_widget": "datalist",
-      "attribut_label": "Jeu de données",
-      "type_util": "dataset",
-      "api": "meta/datasets",
-      "application": "GeoNature",
-      "keyValue": "id_dataset",
-      "keyLabel": "dataset_shortname",
-      "params": {
-        "orderby": "dataset_name",
-        "module_code": "__MODULE.MODULE_CODE"
-      },
-      "data_path": "data",
       "required": true
     },
     "commune": {
