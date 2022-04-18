@@ -53,7 +53,7 @@
       "type_widget": "select",
       "required": true,
       "attribut_label": "Numéro de passage",
-      "values": ["1", "2", "3"]
+      "values": [1, 2, 3]
     },
     "visit_date_min": {
       "type_widget": "date",
