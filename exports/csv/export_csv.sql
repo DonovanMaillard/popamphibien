@@ -27,7 +27,7 @@ SELECT
     -- Informations sur la visite
     v.uuid_base_visit AS uuid_visite,
     v.visit_date_min AS date_visite,
-    replace(nullif(json_extract_path(vc.data::json,'num_passage')::text,'null'),'"','')::integer AS numero_visite,
+    json_extract_path(vc.data::json,'num_passage')::text AS visite,
     obs.observers,
     obs.organismes_rattaches,
     string_agg(distinct meth.methodes,' ; ') AS methodes_prospection,
@@ -126,7 +126,7 @@ SELECT
     v.uuid_base_visit AS uuid_visite,
     v.visit_date_min AS date_visite,
     extract( year from v.visit_date_min) as annee,
-    replace(nullif(json_extract_path(vc.data::json,'num_passage')::text,'null'),'"','')::integer AS numero_visite,
+    json_extract_path(vc.data::json,'num_passage')::text AS visite,
     obs.observers,
     obs.organismes_rattaches,
     replace(json_extract_path(vc.data::json,'accessibility')::text, '"','') as accessibilite,
