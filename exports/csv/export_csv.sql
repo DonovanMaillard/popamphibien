@@ -25,6 +25,8 @@ SELECT
     com.area_name AS commune,
     string_agg(distinct(sp.area_name)||'('||sp.type_code||')', ', ') AS site_protege,
     -- Informations sur la visite
+    v.id_dataset, 
+    d.dataset_name AS jeu_de_donnees,
     v.uuid_base_visit AS uuid_visite,
     v.visit_date_min AS date_visite,
     json_extract_path(vc.data::json,'num_passage')::text AS visite,
@@ -60,6 +62,7 @@ join gn_monitoring.t_sites_groups tsg ON sc.id_sites_group = tsg.id_sites_group
 JOIN gn_commons.t_modules m ON m.id_module = v.id_module
 JOIN taxonomie.taxref t ON t.cd_nom = o.cd_nom
 LEFT JOIN gn_monitoring.cor_site_area csa ON csa.id_base_site = s.id_base_site
+LEFT JOIN gn_meta.t_datasets d ON d.id_dataset=v.id_dataset
 LEFT JOIN (select la.area_name, csa.id_base_site
 	FROM ref_geo.l_areas la
 	JOIN ref_geo.bib_areas_types bat ON la.id_type = bat.id_type
@@ -85,7 +88,7 @@ LEFT JOIN LATERAL ( SELECT array_agg(r.id_role) AS ids_observers,
 LEFT JOIN LATERAL ref_geo.fct_get_altitude_intersection(s.geom_local) alt(altitude_min, altitude_max) ON true
 LEFT JOIN LATERAL (SELECT ref_nomenclatures.get_nomenclature_label(json_array_elements(vc.data::json #> '{methode_de_prospection}')::text::integer,'fr') AS methodes ) meth ON TRUE
 WHERE m.module_code = 'POPAmphibien'
-GROUP BY o.uuid_observation, obs.organismes_rattaches, dep.area_name, dep.area_code, tsg.sites_group_name, o.cd_nom, t.lb_nom, t.nom_vern, o.comments, oc.data, v.visit_date_min, v.comments, v.uuid_base_visit,
+GROUP BY o.uuid_observation, obs.organismes_rattaches, dep.area_name, dep.area_code, tsg.sites_group_name, o.cd_nom, t.lb_nom, t.nom_vern, o.comments, oc.data, v.visit_date_min, v.id_dataset, d.dataset_name, v.comments, v.uuid_base_visit,
 s.base_site_name, sc.data, vc.data, alt.altitude_min, alt.altitude_max, obs.observers, com.area_name, s.geom_local;
 
 
@@ -125,7 +128,9 @@ SELECT
     -- VISITE
     v.uuid_base_visit AS uuid_visite,
     v.visit_date_min AS date_visite,
-    extract( year from v.visit_date_min) as annee,
+    v.id_dataset,
+    d.dataset_name AS jeu_de_donnees,
+    extract( year FROM v.visit_date_min) AS annee,
     json_extract_path(vc.data::json,'num_passage')::text AS visite,
     obs.observers,
     obs.organismes_rattaches,
@@ -155,6 +160,7 @@ JOIN gn_monitoring.t_sites_groups tsg ON sc.id_sites_group = tsg.id_sites_group
 JOIN gn_commons.t_modules m ON m.id_module = v.id_module
 LEFT JOIN gn_monitoring.cor_site_area csa ON csa.id_base_site = s.id_base_site
 LEFT JOIN observations ON observations.id_base_visit=v.id_base_visit 
+LEFT JOIN gn_meta.t_datasets d ON d.id_dataset=v.id_dataset
 LEFT JOIN (SELECT la.area_name, csa.id_base_site
 	FROM ref_geo.l_areas la
 	JOIN ref_geo.bib_areas_types bat ON la.id_type = bat.id_type
@@ -180,5 +186,5 @@ LEFT JOIN LATERAL ( SELECT array_agg(r.id_role) AS ids_observers,
 LEFT JOIN LATERAL ref_geo.fct_get_altitude_intersection(s.geom_local) alt(altitude_min, altitude_max) ON true
 LEFT JOIN lateral (SELECT ref_nomenclatures.get_nomenclature_label(json_array_elements(vc.data::json #> '{methode_de_prospection}')::text::integer,'fr') as methodes ) meth on true
 WHERE m.module_code = 'POPAmphibien'
-GROUP BY v.id_base_visit, tsg.sites_group_name, s.base_site_name, s.geom_local, alt.altitude_min, alt.altitude_max, sc.data, dep.area_name, dep.area_code, com.area_name, sp.area_name, 
+GROUP BY v.id_base_visit, v.id_dataset, d.dataset_name, tsg.sites_group_name, s.base_site_name, s.geom_local, alt.altitude_min, alt.altitude_max, sc.data, dep.area_name, dep.area_code, com.area_name, sp.area_name, 
 vc.data, obs.observers, obs.organismes_rattaches, observations.diversite, observations.taxons_latin, observations.taxons_fr, observations.count_min, observations.count_max ;
