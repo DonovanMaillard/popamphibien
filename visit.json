@@ -53,7 +53,7 @@
       "type_widget": "select",
       "required": true,
       "attribut_label": "Numéro de passage",
-      "values": [1, 2, 3]
+      "values": ["1er passage", "2eme passage", "3eme passage"]
     },
     "visit_date_min": {
       "type_widget": "date",
@@ -110,7 +110,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Turbidité",
       "code_nomenclature_type": "TURBIDITE",
-      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === 1",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1er passage'",
       "type_util": "nomenclature",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
@@ -118,7 +118,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Végétation aquatique principale",
       "code_nomenclature_type": "VEGETATION_AQUATIQUE",
-      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === 1",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1er passage'",
       "type_util": "nomenclature",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
@@ -126,7 +126,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Rives",
       "code_nomenclature_type": "RIVES",
-      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === 1",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1er passage'",
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
       "hidden":"({value}) => value.accessibility === 'Non'"
@@ -135,7 +135,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Habitat terrestre environnant",
       "code_nomenclature_type": "HABITAT_TERRESTRE_MAJORITAIRE",
-      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === 1",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1er passage'",
       "type_util": "nomenclature",
       "title":"Indiquer la catégorie majoritaire",
       "hidden":"({value}) => value.accessibility === 'Non'"
@@ -144,7 +144,7 @@
       "type_widget": "nomenclature",
       "attribut_label": "Activité humaine",
       "code_nomenclature_type": "ACTIVITE_HUMAINE",
-      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === 1",
+      "required": "({value}) => value.accessibility === 'Oui' || value.num_passage === '1er passage'",
       "type_util": "nomenclature",
       "hidden":"({value}) => value.accessibility === 'Non'"
     },
