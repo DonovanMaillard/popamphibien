@@ -104,7 +104,7 @@ DROP VIEW IF EXISTS gn_monitoring.v_export_popamphibien_analyses;
 
 CREATE OR REPLACE VIEW gn_monitoring.v_export_popamphibien_analyses AS
 WITH observations AS (
-    SELECT o.id_base_visit, COUNT(DISTINCT t.cd_ref) AS diversite, string_agg(DISTINCT t.lb_nom, ' , ') AS taxons_latin, string_agg(DISTINCT t.nom_vern, ' , ') AS taxons_fr, sum(nullif(json_extract_path(toc.data::json,'count_min')::text,'null')::integer) AS count_min, sum(nullif(json_extract_path(toc.data::json,'count_max')::text,'null')::integer) AS count_max 
+    SELECT o.id_base_visit, COUNT(DISTINCT t.cd_ref) AS diversite, string_agg(DISTINCT t.lb_nom, ' ; ') AS taxons_latin, string_agg(DISTINCT t.nom_vern, ' ; ') AS taxons_fr, sum(nullif(json_extract_path(toc.data::json,'count_min')::text,'null')::integer) AS count_min, sum(nullif(json_extract_path(toc.data::json,'count_max')::text,'null')::integer) AS count_max 
     FROM gn_monitoring.t_observations o
     LEFT JOIN taxonomie.taxref t ON o.cd_nom=t.cd_nom
     LEFT JOIN gn_monitoring.t_observation_complements toc ON toc.id_observation=o.id_observation
