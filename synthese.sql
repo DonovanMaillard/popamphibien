@@ -69,7 +69,7 @@ AS WITH source AS (
         'milieu_aquatique', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(sc.data::json,'milieu_aquatique')::text,'null')::integer, 'fr'),
         'variation_eau', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(sc.data::json,'variation_eau')::text,'null')::integer, 'fr'),
         'courant',  ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(sc.data::json,'courant')::text,'null')::integer, 'fr'),
-    	'num_passage', replace(nullif(json_extract_path(vc.data::json,'num_passage')::text,'null'),'"','')::integer, 
+    	'num_passage', json_extract_path(vc.data::json,'num_passage')::text, 
     	'accessibilite', (vc.data::json #> '{accessibility}'::text[]),
     	'pluviosite', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'pluviosite')::text,'null')::integer, 'fr'),
     	'couverture_nuageuse', ref_nomenclatures.get_nomenclature_label(nullif(json_extract_path(vc.data::json,'couverture_nuageuse')::text,'null')::integer, 'fr'),
