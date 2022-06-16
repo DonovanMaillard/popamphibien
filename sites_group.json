@@ -34,7 +34,7 @@
     "commune": {
         "type_widget": "municipalities",
         "attribut_label": "Commune",
-        "value_field_name": "area_code",
+        "value_field_name": "id_area",
         "type_util": "area",
         "required": true,
         "title":"Veuillez saisir les principales communes concernées par l'aire"
