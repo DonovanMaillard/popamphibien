@@ -8,14 +8,17 @@ Pour installer l'outil de saisie POPAmphibien, vous devez disposer d'une instanc
 Installation
 ============
 
-wget https://github.com/DonovanMaillard/popamphibien/archive/refs/tags/1.0.0.zip
-unzip 1.0.0.zip
-mv popamphibien-1.0.0 popamphibien
+  ::
+  
+    wget https://github.com/DonovanMaillard/popamphibien/archive/refs/tags/1.0.0.zip
+    unzip 1.0.0.zip
+    mv popamphibien-1.0.0 popamphibien
 
-cd
-cd geonature
-source backend/venv/bin/activate
-geonature monitorings install <path/to/popamphibien> popamphibien
+    cd
+    cd geonature
+    source backend/venv/bin/activate
+    geonature monitorings install <path/to/popamphibien> popamphibien
+
 
 Vous pouvez ensuite vous connecter sur le module monitoring, puis "PopAmphibien" et enfin "editer" pour configurer le module (jeu de données, taxons, synthèse etc).
 
