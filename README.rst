@@ -1,4 +1,6 @@
-# POPAmphibien
+POPAmphibien
+============
+
 Sous-module de saisie GeoNature Monitoring du protocole POPAmphibien - Société Herpétologique de France
 
 
@@ -24,6 +26,7 @@ Vous pouvez ensuite vous connecter sur le module monitoring, puis "PopAmphibien"
 
 Pour tout complément d'information, consulter directement la documentation du module monitoring ; https://github.com/PnX-SI/gn_module_monitoring#readme
 
-! Attention !
-Si vous utilisez un autre "module_code" que popamphibien tout en minuscule, vous devrez adapter les scripts SQL d'exports pour récupérer les données du modules dans vos exports standards et d'analyse.
+Attention
+=========
 
+Si vous utilisez un autre "module_code" que popamphibien tout en minuscule, vous devrez adapter les scripts SQL d'exports pour récupérer les données du modules dans vos exports standards et d'analyse.
